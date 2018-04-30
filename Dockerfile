@@ -13,6 +13,6 @@ RUN \
   rm -rf nethack-3.6.1
 
 # for backup
-VOLUME /usr/games/lib/nethackdir
 
-ENTRYPOINT ["/usr/games/nethack"]
+VOLUME ["/data"]
+CMD ["/usr/games/nethack"]
