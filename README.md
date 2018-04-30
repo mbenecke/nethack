@@ -6,6 +6,10 @@ In order to save your game, the container stores the date in the volume /data.
 
 Create a folder where you want to save everything. For example ~/nethacksaves
 
+```
+mkdir nethacksaves
+```
+
 Then create some files nethack needs:
 ```
 ~/nethacksaves
