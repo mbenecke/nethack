@@ -1,17 +1,6 @@
-FROM debian:jessie
-RUN apt-get update && apt-get install -y --no-install-recommends \
-                        bison \
-                        flex \
-                        gcc \
-                        less \
-                        make \
-                        man \
-                        ncompress \
-                        ncurses-dev \
-                        wget && \
-        apt-get clean && rm -rf /var/lib/apt/lists/*
+FROM alpine
 
-
+RUN apk --no-cache add byacc wget flex gcc groff linux-headers make musl-dev ncurses-dev util-linux
 COPY docker.hints /tmp/docker.hints
 
 RUN wget -O - http://nethack.org/download/3.6.1/nethack-361-src.tgz | \
